@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-  </head>
-  <body>
-    <h1>This is home</h1>
-    <p>Navigation</p>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/prodi">Prodi</a></li>
-        <li><a href="/mahasiswa">Mahasiswa</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/about">About Us</a></li>
-      </ul>
-    </nav>
-    <h4>Berita Terkini</h4>
-    <% news.forEach(data => { %>
-    <h5><%= data.title %></h5>
-    <p><%= data.content %></p>
-    <% }) %>
-  </body>
-</html>
+<h1>This is home</h1>
+<h2>Welcome to our website</h2>
+<h4>Berita Terkini</h4>
+<% news.forEach(data => { %>
+<h5><%= data.title %></h5>
+<p><%= data.content %></p>
+<% }) %>

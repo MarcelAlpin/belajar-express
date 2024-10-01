@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
   ];
-  res.render("index", { title: "Home Page", news: news });
+  res.render("index", { title: "Home Page", layout: "main", news: news });
 });
 
 //route /data prodi
@@ -87,7 +87,7 @@ app.get("/contact", (req, res) => {
 //route /about
 app.get("/about", (req, res) => {
   // res.sendFile(__dirname + "/about.html");
-  res.render("about", { title: "About Us", layout: "main" });
+  res.render("about", { title: "About", layout: "main" });
 });
 
 //route /dosen

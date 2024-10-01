@@ -6,6 +6,7 @@ const expressLayouts = require("express-ejs-layouts"); // Express EJS Layouts
 app.set("views", __dirname + "/views"); // Set views directory
 app.set("view engine", "ejs"); // Set view engine to EJS
 app.use(expressLayouts); // Use Express EJS Layouts
+app.use(express.static(__dirname + "/public")); // Set public directory
 
 // app.get("/", (req, res) => {
 //   res.send("Hello World!");
@@ -61,7 +62,7 @@ app.get("/prodi", (req, res) => {
       singkatan: "AK",
     },
   ];
-  res.render("prodi", { title: "Data Prodi", prodi: prodi });
+  res.render("prodi", { title: "Data Prodi", prodi: prodi, layout: "main" });
 });
 
 //route /mahasiswa
@@ -81,7 +82,7 @@ app.get("/mahasiswa", (req, res) => {
 app.get("/contact", (req, res) => {
   // res.send("Contact Page");
   // res.sendFile(__dirname + "/contact.html");
-  res.render("contact");
+  res.render("contact", { title: "Contact", layout: "main" });
 });
 
 //route /about

@@ -5,6 +5,7 @@ const expressLayouts = require("express-ejs-layouts"); // Express EJS Layouts
 
 app.set("views", __dirname + "/views"); // Set views directory
 app.set("view engine", "ejs"); // Set view engine to EJS
+app.use(expressLayouts); // Use Express EJS Layouts
 
 // app.get("/", (req, res) => {
 //   res.send("Hello World!");
@@ -86,7 +87,7 @@ app.get("/contact", (req, res) => {
 //route /about
 app.get("/about", (req, res) => {
   // res.sendFile(__dirname + "/about.html");
-  res.render("about");
+  res.render("about", { title: "About Us", layout: "main" });
 });
 
 //route /dosen
